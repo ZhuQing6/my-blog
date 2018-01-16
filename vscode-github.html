@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>如何将vscode与github连接</title>
+    <style>
+        body{background-color:#D9D9D9}
+        img{max-height:450px;max-width:450px;}
+    </style>
+</head>
+<body>
+    <h1>如何将vscode与github连接</h1>
+    <h4>1.确保已经配置好Git，即将下面的命令敲入GitBash：</h4>
+<p>git config --global user.name 你的英文名</p>
+<p>git config --global user.email 你的邮箱</p> 
+<p>git config --global push.default matching</p>
+<p>git config --global core.quotepath false</p>
+<p>git config --global core.editor "vim"</p>
+<p>期间没有报错，即配置好Git了;下面进入VSCode与GitHub连接配置</p>
+    <h4>2.获取SSH key(重新生成过密钥的情况)</h4>
+<p>打开GitHub，依次点击Settings——SSH and GPG keys——generating SSH keys——Generating a new SSH key and adding it to the ssh-agent——复制选中的命令到GitBash，点击3次回车，得到一个泡泡的样子说明成功;</p>
+<p>在GitBash里再输入命令:cat ~/.ssh/id_rsa.pub,回车,得到一大段英文,复制这段英文！</p>
+<p>以上步骤可参考以下图示:</p>
+<img src="assets/images/1.png">
+<img src="assets/images/2.png">
+<img src="assets/images/3.png">
+<img src="assets/images/4.png">
+<img src="assets/images/5.png"><br/><hr/><br/>
+<img src="assets/images/6.png">
+<img src="assets/images/7.png"><br/><hr/><br/>
+<p>回到GitHub中粘贴复制下来的一段英文，然后add即可！</p>
+<img src="assets/images/8.png">
+<img src="assets/images/9.png">
+    <h4>3.获取SSH key(生成过密钥,没有配置github的情况)</h4> 
+<p>由于个人是此情况也大概说一下吧！</p>  
+<p>找到.ssh文件(一般都在c盘的用户文件夹下,即C->用户->.ssh->id_rsa.pub),id_rsa.pub里即为已经生成的密钥,然后复制里面的所有内容至github中粘贴add即可！</p>
+    <h4>4.在GitHub中创建一个repository,点击New repository,起一个名字my blog,直接点Creat repository即可！</h4>
+<p>注意是SSH链接</p>
+<img src="assets/images/10.png">
+<img src="assets/images/11.jpg">
+    <h4>5.新建目录</h4>
+<p>新建一个目录,用于存放文章,建好后,右键点击Git Bash Here,就直接到了我们新建的这个目录里,再把上图的命令一行一行地粘贴到GitBash里运行即可！</p>
+<p>下次编写代码时，直接用vscode打开该文件夹修改推送即可！</p>
+</body>
+</html>
