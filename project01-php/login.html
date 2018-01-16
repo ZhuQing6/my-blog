@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>管理员登陆</title>
+    <style>
+        div.main{margin:0 auto;width:360px;height:375px;border:1px solid transparent;
+            background:#EFEFF0;margin-top:100px;}
+        h1,h2,p{color:#73879C;text-align:center}
+        input{width:300px;height:30px;margin-left:30px;margin-top:20px;}
+        #upwd{margin-bottom:30px;}
+        button{background:white;color:#73879C;margin-left:150px;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <h1>——&nbsp;管理员登录&nbsp;——</h1>
+    <form>
+        <input type="text" placeholder="管理员登录名" id="uname"/><br/>
+        <input type="text" placeholder="管理员登录密码" id="upwd"/><br/>
+        <button id="btn">登陆</button>
+    </form>
+    <div>
+        <h2>易优泽后台管理系统</h2>
+        <p>©2017 版权所有，YYY.COM</p>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/myQuery.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/jquery-3.2.1.js"></script>
+<script>
+    $("#btn").click(function(e){
+        e.preventDefault();
+        var n = $("#uname").val();
+        var p = $("#upwd").val();
+        $.ajax({
+            type:"GET",
+            url:"data/login.php",
+            data:{uname:n,upwd:p},
+            success:function(data){
+                if(data.code>0){
+                    sessionStorage.setItem("uname",n);
+                    sessionStorage.setItem("id",data.eid);
+                    location.href = "user.html";
+                }else{alert("请重新输入用户名和密码！")}
+            },
+            error:function(data){
+                alert("您的网络出现故障，请检查");
+            }
+        });
+    });
+</script>
+</body>
+</html>

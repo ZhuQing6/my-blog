@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>易优之联系我们</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/intr4.css">
+</head>
+<body>
+<div id="float"><a href="connection.html"><img src="img/zaixian.jpg"></a></div>
+<div class="main">
+  <header id="header"><!--加载页头数据--></header>
+  <nav id="nav"> <!--导航条--><ul id="nav_ul"></ul></nav>
+  <div id="intr4_banner"><img src="img/intr/intr4_top.png"></div>
+  <div id="list">
+	  <ul>
+		 <li><h3><a href="#content1">集团总部</a></h3>
+		  <ul class="li">
+			 <li><a href="#content1-1">-总部具体地址</a></li>
+			 <li><a href="#content1-2">-各地方分部</a></li>
+			 <li><a href="#content1-3">-总部地图</a></li>
+		  </ul>
+		 </li>
+		 <li><h3><a href="#content2">投诉服务热线</a></h3></li>
+	  </ul>
+  </div>
+  <div id="content">
+	<div id="content1">
+	 <img src="img/intr/intr4_1.png" class="intr_4">
+	  <h3 id="content1-1">总部地址：</h3>中国苏州平江新城平泷路1258号天元辰广场4-5F
+      <h3>总机：</h3>0512-68780000
+      <h3>传真：</h3>0512-68780000-2000
+      <h3>官网：</h3>http://www.engma.net
+      <h3>新浪微博：</h3>@易优泽
+      <h3>腾讯微信：</h3>易优泽、HR商学院
+      <h3>全国400投诉服务热线：</h3>400-1133-400
+      <h3 id="content1-2">各地分公司：</h3>苏州总部 / 上海 / 昆山 / 太仓 / 常熟 / 吴江 / 张家港 / 无锡 / 宜兴 / 江阴 / 常州 / 扬州 / 盐城 / 徐州 / 嘉兴 / 芜湖 / 合肥 / 重庆 / 成都 / 贵阳 / 武汉 / 宜昌 / 孝感 / 十堰 / 鄂州 / 荆州 / 襄阳 / 黄冈 / 黄石
+      <h3 id="content1-3">地图：</h3><div id="map" style="width:800px;height:400px;border:1px solid #000;"></div>
+    </div>
+	<div id="content2">
+	  <div id="con">
+		 <img src="img/intr/intr4_2.jpg"><span>全国400投诉服务热线：400-1133-400</span>
+		 <hr><br><br/>
+	  </div>
+      &nbsp;&nbsp;400电话客户服务中心（400-1133-400）成立于2002年，是国内首批提供400电话客户服务热线的人力资源服务机构。中心立足于长三角福地——苏州，服务于国内20余家分支机构，致力于打造人力资源行业最专业的400电话客户服务中心。<br><br>
+      &nbsp;&nbsp;中心自成立以来，充分依托电话客户服务管理系统和计算机信息技术平台，直接面向求职者、雇员、合作企业、供应商等终端用户，提供一站式、智能化、个性化的综合信息咨询服务。<br><br>
+      &nbsp;&nbsp;中心秉承“客户至上”的服务理念，自成立之初就建立健全了完善的客户服务管理体系。通过11年5*8小时不间断的人工呼入、呼出服务及7*24小时的电子语音系统服务，为广大求职者提供高效便捷的求职服务平台，为雇员提供一站式、全方位的在职咨询、投诉服务，为合作企业及供应商搭建及时高效的沟通反馈平台。<br><br>
+      &nbsp;&nbsp;400电话客户服务中心以客户需求为导向，共提供呼入、呼出2大类，34细项客户服务项目。
+      <img src="img/intr/intr4_3.jpg"><img src="img/intr/intr4_4.jpg">
+	</div>
+	</div>
+  <footer id="footer" class="clear"> <!--左边的logo添加文字描述，尽量占满一行-->
+	  <iframe src="footer.html" frameborder="0"></iframe>
+  </footer>
+</div>
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/myQuery.js"></script>
+  <script src="js/ajax.js"></script>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/intr4.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=u70A5pnNrRtRT1XAgwM5jL2YIVj1Gv97"></script>
+  <script type="text/javascript">
+	var map = new BMap.Map("map");
+	var point = new BMap.Point(120.75086,31.28002);
+	map.centerAndZoom(point, 19);
+	var mk = new BMap.Marker(point);
+	mk.setAnimation(BMAP_ANIMATION_BOUNCE);
+	map.addOverlay(mk);
+  </script>
+</body>
+</html>

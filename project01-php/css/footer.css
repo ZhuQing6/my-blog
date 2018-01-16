@@ -1,0 +1,11 @@
+#main{background:#fff}
+#footer{display:flex;justify-content:center;}
+#foot{width:250px;}
+div.foot-list ul{margin-right:60px;margin-left:60px;float:left;  }
+div.foot-list li{margin-top:15px;font-size:1.2em;}
+#foot-sao{margin-top:10px;margin-left:130px;}
+#foot-sao img{width:80px;height:80px;}
+#foot-pic a{margin-right:120px;}
+#a1{margin-left:120px;}
+#foot-pic{margin-bottom:20px;margin-top:25px;display:flex;justify-content:space-between;}
+#foot-pic img{border:1px solid #000;width:120px;height:55px;}

@@ -1,0 +1,25 @@
+/***点击咨询的样式***/
+body{position:relative}
+#float,#float>img{width:100px;height:100px;position:absolute;top:10px;left:30px;z-index:9;}
+/***header的样式***/
+#header{margin-top:20px;}
+#header iframe{width:1300px;height:120px;}
+/***导航条样式***/
+#nav{width:1300px;height:50px;border:2px solid white;margin-bottom:20px;
+ margin-top:88px;background-image:linear-gradient(to left,#53B4F5,#C4E5F5);}
+#nav ul{padding-left:55px;display:flex;justify-content:space-between;}
+#nav li{font-size:22px;padding-right:55px;margin-top:12px;line-height:25px;}
+/***内容样式***/
+#intr4_banner>img{width:1300px;height:200px;}
+#list{margin-top:30px;width:200px;float:left;font-weight:bold;font-size:1.2em;font-family:"Microsoft yahei";}
+#list>ul>li{margin-top:10px;}
+ul.li{margin-top:5px;background:#F6E687;}
+#content{margin-top:50px;width:1000px;margin-left:30px;float:right;font-size:1.2em;}
+#content1>h3{margin-top:10px;margin-bottom:10px;}
+img.intr_4{float:right;margin-right:200px;margin-top:40px;}
+#content2{margin-top:20px;}
+#con>span{font-size:20px;line-height:80px;color:#920883;font-weight:bold;}
+#con>img{margin-top:10px;}
+/***底部***/
+#footer iframe{width:1300px;height:300px;margin-top:60px;}
+hr{border:1px solid transparent;border-radius:5px;box-shadow:4px 4px 8px #CDCDCD;}

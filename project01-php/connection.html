@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>联系客服</title>
+<style>
+body{background:#AFD6F5}
+	 div.main{margin:0 auto;width:360px;height:375px;border:1px solid transparent;
+		 background:#EFEFF0;margin-top:100px;}
+	 div.liuyan{background:#08ADF0;padding:10px;box-sizing:border-box;
+		 color:white;font-size:16px;height:40px;}
+	 div.gongsi{color:#5A5A5A;height:60px;padding-left:20px;padding-top:10px;
+		 box-sizing:border-box;}
+	 #neirong{width:300px;height:70px;margin-left:35px;margin-top:20px;
+		 border:1px solid #DDDDDD;box-sizing:border-box;  }
+	 #uname{width:300px;height:30px;
+		 margin-left:35px;margin-top:12px;padding-left:35px;
+		 box-sizing:border-box;border:1px solid #DDDDDD;
+		 background:white url(img/connection/name.jpg) no-repeat;}
+	 #tel{width:300px;height:30px;box-sizing:
+	 border-box;border:1px solid #DDDDDD;
+		 margin-left:35px;margin-top:12px;padding-left:35px;
+		 background:white url(img/connection/tel.jpg) no-repeat;}
+	 #send{background:#08ADF0;color:white;
+		 width:80px;height:30px;margin-left:140px;margin-top:20px;}
+	 div.onStyle>input{width:800px;height:400px;}
+	 div.sendStyle>input{width:800px;height:400px;}
+</style>
+</head>
+<body>
+ <div class="main">
+	<div class="liuyan">请您留言</div>
+	<div class="gongsi">苏州易优泽企业管理有限公司</div>
+	<hr/>
+	<form>
+		<input type="text" placeholder="请在此输入留言内容,我们会尽快与您联系。(必填)" id="neirong"/><br/>
+		<input type="text" placeholder="姓名" id="uname"/><br/>
+		<input type="text" placeholder="电话(必填)" id="tel"/><br/>
+		<button type="submit" id="send">发送</button><br/>
+	</form>
+</div>
+ <script src="js/myQuery.js"></script>
+ <script src="js/ajax.js"></script>
+ <script src="js/jquery-3.2.1.js"></script>
+ <script>//添加表单的规格，不能为空，电话号码格式等
+	 $("#send").click(function(e){
+	  e.preventDefault();
+		var text=$("#neirong").val();
+		var uname=$("#uname").val();
+		var tel=$("#tel").val();
+		console.log(text,uname,tel);
+		//表单不能为空，电话号码格式
+		 var telz=/^(\+86|0086)?\s*1[34578]\d{9}$/;
+		 if(!telz.test(tel)){alert("号码格式不正确，请重新输入！");}
+		 else{
+	  $.ajax({
+		 type:"post",
+		 url:"data/connection.php",
+		 data:{text:text,uname:uname,tel:tel},
+		 success:function(data){
+           alert(data.msg);location.assign("index.html");},
+		 error:function(data){alert(data.msg);}
+	  });}
+	 });
+ </script>
+</body>
+</html>
